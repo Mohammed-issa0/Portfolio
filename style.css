@@ -79,6 +79,33 @@
     }
     
 }
+@keyframes arabic {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+    
+}
+@keyframes english {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 75%;
+    }
+    
+}
+@keyframes chinese {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 25%;
+    }
+    
+}
 @keyframes glow {
     0%{
         background-color: var(--bg-color);
@@ -161,6 +188,7 @@ span{
     color: var(--secon-bg-color);
     display: none;
 }
+/* ------------------------------------------------------------------- */
 /* Home section start */
 section{
     padding: 100px 10%;
@@ -382,7 +410,7 @@ a.btn:nth-child(2)::before{
     filter: blur(10px);
 }
 /* Home section end */
-
+/* ------------------------------------------------------------------- */
 /* start about section  */
 
 .about{
@@ -478,7 +506,7 @@ a.btn:nth-child(2)::before{
 }
 
 /* end about section  */
-
+/* ------------------------------------------------------------------- */
 /* start skills section  */
 
  .main-text{
@@ -508,9 +536,14 @@ a.btn:nth-child(2)::before{
 .skill-main{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-rows: minmax(200px, auto);
     grid-row-gap: 30px;
     grid-column-gap: 50px;
+    grid-template-areas:
+    "skill-left skill-right"
+    "skill-bottom skill-bottom"
+    ;
 }
 
 .skill-bar{
@@ -522,7 +555,15 @@ a.btn:nth-child(2)::before{
     font-size: var(--normal-font);
     text-align: center;
 }
-
+.skill-left{
+    grid-area: skill-left;
+}
+.skill-right{
+    grid-area: skill-right;
+}
+.skill-bottom{
+    grid-area: skill-bottom;
+}
 .skill-left .skill-bar .info{
     display: flex;
     justify-content: space-between;
@@ -574,13 +615,13 @@ a.btn:nth-child(2)::before{
 
 .professional{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
     margin-top: 50px;
 }
 
 .box{
     position: relative;
-    margin: 10px;
+    margin: 5px;
     flex: 1 1 15rem;
 }
 
@@ -625,4 +666,164 @@ a.btn:nth-child(2)::before{
     /* animation: glow 0.04s linear forwards; */
     animation-delay: calc(var(--i)*0.05s);
 }
+
+
+/* ---------skill bottom----------------------skill bottom------------------- */
+.skill-bottom .skill-bar .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.skill-bottom .skill-bar .bar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skill-bottom.skill-bar .bar span {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: var(--hover-color);
+    border-radius: 25px;
+    box-shadow: var(--neon-box-shadow);
+}
+
+.skill-bottom .skill-bar .bar .arabic {
+    width: 100%;
+    animation: arabic 2s;
+}
+
+.skill-bar .bar .english {
+    width: 75%;
+    animation: english 3s;
+}
+
+.skill-bar .bar .chinese {
+    width: 25%;
+    animation: chinese 4s;
+}
+
 /* end skills section  */
+/* ------------------------------------------------------------------- */
+
+/* start portofolio section  */
+.portofolio-gallery{
+    transition: .3s;
+}
+.fillter-buttons{
+    margin: 2rem;
+    text-align: center;
+}
+
+.fillter-buttons .btn{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .4px;
+    margin-left: 1.3rem;
+    color: var(--text-color);
+}
+
+.fillter-buttons .btn:hover{
+    color: var(--hover-color);
+}
+
+.portofolio-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 2rem;
+}
+
+.port-box{
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #292e33;
+    display: flex;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    border: 2px solid var(--hover-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.port-box:hover .port-content{
+    opacity: 1;
+}
+
+.port-box:hover .port-image img{
+    /* transform: scale(1.1) rotate(20deg); */
+    transform: scale(1.2) rotate(5deg);
+}
+.port-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.port-image img{
+    width: 100%;
+    opacity: .5s;
+    height: 100%;
+    transition: .5s;
+}
+
+.port-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: linear-gradient(rgba(0,0,0,.2), #12f7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: .5s;
+    padding: 0 2rem;
+}
+
+.port-content h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.port-content p{
+    font-size: .8rem;
+    margin: 5px 0 15px 0;
+}
+
+.port-content a{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hover-color);
+    outline: 2px solid #fff;
+}
+
+.port-content a i{
+    font-size: 1.3rem;
+    color: var(--secon-bg-color);
+}
+/* end portofolio section  */
+/* ------------------------------------------------------------------- */
+/* start contact section  */
+
+/* end contact section  */
