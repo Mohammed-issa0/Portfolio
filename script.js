@@ -36,6 +36,16 @@ currentWordIndex = currentWordIndex === maxWordIndex ? 0 : currentWordIndex +1;
 changeText();
 setInterval(changeText, 3000);
 
+
+// let icons = document.querySelector(".socia-icons i");
+// icons.onmousenter=function ine(){
+//     icons.classList.add("bx-tada");
+// }
+
+function ine(e){
+    addEventListener(onmouseenter, e.classList.add("bx-tada"));
+}
+
 // circle skill ----------------------------------------------
 const circles= document.querySelectorAll('.circle');
 circles.forEach(elem=>{

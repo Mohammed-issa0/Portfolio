@@ -711,7 +711,7 @@ section{
 }
 
 .points.marked{
-    /* animation: glow 0.04s linear forwards; */
+    animation: glow 0.04s linear forwards;
     animation-delay: calc(var(--i)*0.05s);
 }
 
@@ -1069,5 +1069,8 @@ footer a i{
         .info-about2,
         .info-about3{
             display: none;
+        }
+        .img-about p{
+            font-size: 1rem;
         }
 }
