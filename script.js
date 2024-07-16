@@ -37,14 +37,17 @@ changeText();
 setInterval(changeText, 3000);
 
 
-// let icons = document.querySelector(".socia-icons i");
+let soIc = document.querySelector("#soIc");
 // icons.onmousenter=function ine(){
 //     icons.classList.add("bx-tada");
 // }
 
-function ine(e){
-    addEventListener(onmouseenter, e.classList.add("bx-tada"));
-}
+// soIc.onclick =()=>{
+//     soIc.classList.toggle("bx-tada");
+// }
+// function ine(e){
+//     addEventListener(onmouseenter, e.classList.add("bx-tada"));
+// }
 
 // circle skill ----------------------------------------------
 const circles= document.querySelectorAll('.circle');

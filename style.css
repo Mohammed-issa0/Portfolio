@@ -141,7 +141,7 @@ Portofolio starts at 721 and end at 848
     }
     100%{
         background-color: var(--hover-color);
-        box-shadow: var(--neon-box-shadow);
+        box-shadow: var(--sneon-box-shadow);
     }
 }
 /* keyframes-------------------------------------------------------- */
@@ -154,7 +154,7 @@ Portofolio starts at 721 and end at 848
     --secon-bg-color:#292e33;
     --big-font:2.5rem;
     --normal-font:2rem;
-    /* --neon-box-shadow: 0 0 .5rem var(var(--hover-color)); */
+    --sneon-box-shadow: 0 0 .5rem var(var(--hover-color));
     --h2-font: 3rem;
     --neon-box-shadow:0 0 10px rgba(18, 247, 255, 0.3),
     0 0 20px rgba(18, 247, 255, 0.3),
@@ -183,6 +183,8 @@ header{
     justify-content: space-between;
     width: 100%;
     padding: 20px 10%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 5px #00000095;
 }
 
 header.sticky{
@@ -190,6 +192,7 @@ header.sticky{
     border-radius: 1px solid var(--secon-bg-color);
     padding: 12px 10px;
 }
+
 .logo{
     font-size: 26px;
     font-weight: 700;
@@ -227,7 +230,7 @@ span{
     font-size: 1.8rem;
     z-index: 10001;
     cursor: pointer;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     background-color: var(--hover-color);
     border-radius: 3px;
     color: var(--secon-bg-color);
@@ -250,9 +253,9 @@ section{
     align-items: center;
     grid-gap: 4em;
 }
-.home-content{
+/* .home-content{
     max-width: 600px;
-}
+} */
 .home-content h1{
     font-size: var(--big-font);
     font-weight: 700;
@@ -297,6 +300,7 @@ section{
 .home-content p{
     color: #bdbdbd;
     line-height: 1.6;
+    margin: 5px 0;
 }
 
 .info-box{
@@ -465,6 +469,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     grid-gap: 2em;
     background-color: var(--secon-bg-color);
 }
@@ -496,7 +501,8 @@ section{
 .about-content h3{
     font-weight: 600;
     font-size: 1.5rem;
-    margin-bottom: .2rem;
+    /* margin-bottom: .2rem; */
+    margin: 12px 0 24px;
 }
 
 .about-content p{
@@ -1037,6 +1043,7 @@ footer a i{
     }
     .about{
         flex-direction: column-reverse;
+        width: 100%;
     }
     .skill-main{
         grid-template-columns: 1fr;
@@ -1073,4 +1080,92 @@ footer a i{
         .img-about p{
             font-size: 1rem;
         }
+}
+
+@media (max-width: 768px) {
+    .skill-main {
+        width: 100%;
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr); */
+        grid-template-rows: minmax(200px, auto);
+        grid-row-gap: 30px;
+        grid-column-gap: 50px;
+        grid-template-areas:
+            "skill-left"
+            "skill-right"
+            "skill-bottom"
+        ;
+    }
+
+    .info-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .email-info{
+        margin-bottom: 5px;
+        
+    }
+    .home-content h1{
+        font-size: 32px;
+    }
+    .home-content p{
+    width: 400px;
+    }
+    .change-text{
+        font-size: 20px;
+    }
+    .home-image .img-box{
+        max-width:350px;
+        height:auto;
+    }
+        .img-box{
+            width: 350px;
+            height: 350px;
+            position: relative;
+        }
+        
+        .liquid-shaped {
+        width: 69%;
+        left: -1%;
+        top: 10%;
+        }
+
+    .img-box img:hover {
+        filter: blur(0);
+        }
+
+     .navlist.open {
+        position: absolute;
+        top: -1000px;
+        /* right: 50%; */
+        left: 50%;
+        display: flex;
+        top: 50%;
+        width: 250px;
+        /* justify-content: start; */
+        align-items: center;
+        border: 5px solid var(--hover-color);
+        transform: translate(-50%, 30%);
+        border-radius: 10px;
+        box-shadow: var(--neon-box-shadow);
+        flex-direction: column;
+        background-color: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all .45s ease;
+        align-items: stretch;
+    }
+        .navlist.open a{
+            border-bottom: 1px solid var(--text-color);
+            text-align: center;
+        }
+        .navlist.open a.dd {
+            border-bottom: none;
+        }
+    /* .navlist.open a:hover{
+        background-color: #300a2b;
+        width: 100%; */
+    
+                /* width: 250px !important; */
 }
