@@ -37,7 +37,7 @@ changeText();
 setInterval(changeText, 3000);
 
 
-let soIc = document.querySelector("#soIc");
+// let soIc = document.querySelector("#soIc");
 // icons.onmousenter=function ine(){
 //     icons.classList.add("bx-tada");
 // }
@@ -84,7 +84,6 @@ function activeMenu(){
     }
     menuLi.forEach(sec => sec.classList.remove('active'));
     menuLi[len].classList.add('active');
-
 }
 
 activeMenu();
@@ -110,11 +109,11 @@ window.onscroll =()=>{
     navlise.classList.replace("open");
 }
 
-let flyBtn=document.querySelector(".flyBtn");
-window.onscroll= function(){
-    if(window.scrollY>=600){
-        flyBtn.style.display="block";
-    }else{
-        flyBtn.style.display="none"
-    }
-}
+// let flyBtn=document.getElementsByClassName(".flyBtn");
+// window.onscroll= function(){
+//     if(window.scrollY>=600){
+//         flyBtn.style.display="block";
+//     }else{
+//         flyBtn.style.display="none";
+//     }
+// }

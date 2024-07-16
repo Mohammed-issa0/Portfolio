@@ -11,7 +11,7 @@ about starts at 152 and end at 202
 
 Skills starts at 510 and end at 720
 
-Portofolio starts at 721 and end at 848
+Portfolio starts at 721 and end at 848
 
 */
 *{
@@ -146,7 +146,17 @@ Portofolio starts at 721 and end at 848
 }
 /* keyframes-------------------------------------------------------- */
 
+/* @media screen ----------------------------- */
 
+/* @media (min-width: 768px) {
+    
+}
+
+@media (max-width: 767px) {
+
+} */
+
+/* @media screen ----------------------------- */
 :root{
     --text-color:#f5f5f5;
     --hover-color:#12f7ff;
@@ -226,6 +236,7 @@ span{
 .navlist a.active{
     color: var(--hover-color);
 }
+
 #menu-icon{
     font-size: 1.8rem;
     z-index: 10001;
@@ -768,7 +779,7 @@ section{
 /* ------------------------------------------------------------------- */
 
 /* start portofolio section  */
-.portofolio-gallery{
+.portfolio-gallery{
     transition: .3s;
 }
 .fillter-buttons{
@@ -792,7 +803,7 @@ section{
     color: var(--hover-color);
 }
 
-.portofolio-gallery{
+.portfolio-gallery{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     gap: 2rem;
@@ -961,7 +972,9 @@ footer p{
     font-size: 1rem;
     color: var(--secon-bg-color);
 } */
-
+/* .flyBtn{
+    display: none;
+} */
 .flyBtn a{
     display: inline-flex;
     justify-content: center;
