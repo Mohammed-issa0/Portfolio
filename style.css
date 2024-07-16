@@ -941,23 +941,40 @@ footer {
     padding: 1.5rem 10%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:center;
 }
 
 footer p{
     color: #bdbdbd;
 }
 
-footer a {
+/* footer a {
     display: inline-flex;
     justify-content: center;
     color: var(--text-color);
     background: var(--hover-color);
     padding: .6rem;
     border-radius: 5px;
-}
+} */
 
-footer a i{
+/* footer a i{
+    font-size: 1rem;
+    color: var(--secon-bg-color);
+} */
+
+.flyBtn a{
+    display: inline-flex;
+    justify-content: center;
+    color: var(--text-color);
+    background: var(--hover-color);
+    padding: .6rem;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    z-index: 1000;
+}
+.flyBtn a i {
     font-size: 1rem;
     color: var(--secon-bg-color);
 }

@@ -109,3 +109,12 @@ window.onscroll =()=>{
     menuIcon.classList.remove("bx-x");
     navlise.classList.replace("open");
 }
+
+let flyBtn=document.querySelector(".flyBtn");
+window.onscroll= function(){
+    if(window.scrollY>=600){
+        flyBtn.style.display="block";
+    }else{
+        flyBtn.style.display="none"
+    }
+}
