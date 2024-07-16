@@ -149,12 +149,19 @@ Portfolio starts at 721 and end at 848
 /* @media screen ----------------------------- */
 
 /* @media (min-width: 768px) {
-    
+    header nav .toggle-menu {
+        display: none;
+    }
+}
+
+header nav ul {
+    display: flex;
 }
 
 @media (max-width: 767px) {
-
-} */
+    header nav ul {
+        display: none;
+    } */
 
 /* @media screen ----------------------------- */
 :root{
@@ -183,7 +190,7 @@ body{
 }
 /* header sectioin-------------------------------------------------------- */
 header{
-    position: fixed;
+    position:fixed;
     left: 0;
     top: 0;
     z-index: 1000;
@@ -230,7 +237,7 @@ span{
     0 0 70px rgba(18, 247, 255, 0.6),
     0 0 80px rgba(18, 247, 255, 0.6),
     0 0 100px rgba(18, 247, 255, 0.6),
-    0 0 100px rgba(18, 247, 255, 0.6);;
+    0 0 100px rgba(18, 247, 255, 0.6);
 }
 
 .navlist a.active{
@@ -246,6 +253,12 @@ span{
     border-radius: 3px;
     color: var(--secon-bg-color);
     display: none;
+}
+
+@media (max-width: 767px) {
+    header{
+        width: 100%;
+    }
 }
 /* end header sectioin-------------------------------------------------------- */
 
@@ -263,6 +276,12 @@ section{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     grid-gap: 4em;
+}
+
+@media (max-width: 767px) {
+    .home {
+        overflow-y: hidden;
+    }
 }
 /* .home-content{
     max-width: 600px;
@@ -472,6 +491,10 @@ section{
 .liquid-shaped:nth-child(2){
     filter: blur(10px);
 }
+
+@media (max-width: 767px) {
+
+}
 /* Home section end */
 /* ------------------------------------------------------------------- */
 /* start about section  */
@@ -491,7 +514,7 @@ section{
 }
 
 .about .img-about img{
-    /* max-width: 400px; */
+    max-width: 400px;
     height: auto;
 }
 
@@ -1113,6 +1136,9 @@ footer p{
 }
 
 @media (max-width: 768px) {
+    /* .header{
+        position: fixed;
+    } */
     .skill-main {
         width: 100%;
         display: grid;
@@ -1137,10 +1163,10 @@ footer p{
         
     }
     .home-content h1{
-        font-size: 32px;
+        font-size: 28px;
     }
     .home-content p{
-    width: 400px;
+    width: 350px;
     }
     .change-text{
         font-size: 20px;

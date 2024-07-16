@@ -72,7 +72,7 @@ circles.forEach(elem=>{
 })
 
 // mix it up portofoli 
-var mixer = mixitup('.portofolio-gallery');
+var mixer = mixitup('.portfolio-gallery');
 
 // active menu------------------------------------------------
 let menuLi= document.querySelectorAll('header ul li a');
