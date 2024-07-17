@@ -413,7 +413,7 @@ section{
 }
 
 .social-icons{
-    margin-top: 8rem;
+    margin-top: 7rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -536,7 +536,7 @@ section{
     font-weight: 600;
     font-size: 1.5rem;
     /* margin-bottom: .2rem; */
-    margin: 12px 0 24px;
+    margin: 12px 0 10px;
 }
 
 .about-content p{
@@ -1249,12 +1249,19 @@ footer p{
                 top: 10%;
             }
 }
+@media (max-width: 768px){
+        .liquid-shaped {
+                width: 69%;
+                    left: -1%;
+                    top: 12%;
+            }
+}
 
 @media (max-width: 991px) {
     .liquid-shaped {
-            width: 51%;
+        width: 69%;
             left: -1%;
-            top: 10%;
+            top: 12%;
         }
 }
 
