@@ -106,7 +106,7 @@ menuIcon.onclick =()=>{
 
 window.onscroll =()=>{
     menuIcon.classList.remove("bx-x");
-    navlise.classList.replace("open");
+    navlise.classList.replace("open", "k");
 }
 
 // let flyBtn=document.getElementsByClassName(".flyBtn");

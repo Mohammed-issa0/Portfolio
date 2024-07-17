@@ -803,7 +803,7 @@ section{
 
 /* start portofolio section  */
 .portfolio-gallery{
-    transition: .3s;
+    transition: .1s;
 }
 .fillter-buttons{
     margin: 2rem;
@@ -832,6 +832,9 @@ section{
     gap: 2rem;
 }
 
+.portfolio-gallery img{
+    object-fit: cover;
+}
 .port-box{
     position: relative;
     border-radius: 15px;
@@ -1242,28 +1245,34 @@ footer p{
                 /* width: 250px !important; */
 }
 
-@media (min-width: 768px){
-        .liquid-shaped {
-                width: 51%;
-                left: -1%;
-                top: 10%;
-            }
-}
-@media (max-width: 768px){
+
+@media (max-width: 767px){
         .liquid-shaped {
                 width: 69%;
-                    left: -1%;
-                    top: 12%;
+                left: -1%;
+                top: 12%;
+            }
+            .home{
+                overflow: hidden;
             }
 }
-
-@media (max-width: 991px) {
+@media (min-width: 768px) {
     .liquid-shaped {
-        width: 69%;
-            left: -1%;
-            top: 12%;
-        }
+        /* width: 51%;
+        left: -1%;
+        top: 10%; */
+        width: 100%;
+        height: 100%;
+        top: 10%;
+    }
 }
+/* @media (max-width: 991px) {
+    .liquid-shaped {
+                width: 90%;
+                left: 5%;
+                top: 20%;
+        }
+} */
 
 @media (min-width: 992px) {
     .liquid-shaped {
