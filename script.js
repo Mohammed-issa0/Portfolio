@@ -48,7 +48,26 @@ setInterval(changeText, 3000);
 // function ine(e){
 //     addEventListener(onmouseenter, e.classList.add("bx-tada"));
 // }
+// ----------------------------------------------------------------------------
 
+document.querySelectorAll('.social-icons a').forEach(anchor => {
+    anchor.addEventListener('mouseover', function() {
+        const icon = this.querySelector('i');
+        if (icon) {
+            icon.classList.add('bx-tada');
+        }
+    });
+
+    anchor.addEventListener('mouseout', function() {
+        const icon = this.querySelector('i');
+        if (icon) {
+            icon.classList.remove('bx-tada');
+        }
+    });
+});
+
+
+// ----------------------------------------------------------------------------
 // circle skill ----------------------------------------------
 const circles= document.querySelectorAll('.circle');
 circles.forEach(elem=>{
