@@ -106,7 +106,7 @@ menuIcon.onclick =()=>{
 
 window.onscroll =()=>{
     menuIcon.classList.remove("bx-x");
-    navlise.classList.replace("open", "k");
+    navlise.classList.remove("open");
 }
 
 // let flyBtn=document.getElementsByClassName(".flyBtn");
@@ -126,3 +126,25 @@ window.addEventListener('scroll', function() {
         flyBtn.style.display = 'none';
     }
 });
+
+// parallax-------------------------------------------
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add("show-items")
+        }else{
+            entry.target.classList.remove("show-items")
+        }
+    });
+});
+
+const scrollScale = document.querySelectorAll(".scroll-scale");
+scrollScale.forEach((el)=>observer.observe(el));
+
+const scrollBottom = document.querySelectorAll(".scroll-bottom");
+scrollBottom.forEach((el)=>observer.observe(el));
+
+const scrollTop = document.querySelectorAll(".scroll-top");
+scrollTop.forEach((el)=>observer.observe(el));
+

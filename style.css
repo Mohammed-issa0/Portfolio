@@ -42,6 +42,19 @@ Portfolio starts at 721 and end at 848
 
 
 /* keyframes-------------------------------------------------------- */
+
+@keyframes slideAnimation {
+    0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
+
 @keyframes morph {
 
     0%,
@@ -223,9 +236,13 @@ span{
 }
 
 .navlist a{
+    display: inline-block;
     color: var(--text-color);
     font-weight: 500;
     padding: 10px 20px;
+    animation: slideAnimation 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+    opacity: 0;
 }
 
 .navlist a:hover{
@@ -810,7 +827,7 @@ section{
     text-align: center;
 }
 
-.fillter-buttons .btn{
+.fillter-buttons .button{
     background: none;
     outline: none;
     border: none;
@@ -822,7 +839,7 @@ section{
     color: var(--text-color);
 }
 
-.fillter-buttons .btn:hover{
+.fillter-buttons .button:hover{
     color: var(--hover-color);
 }
 
@@ -888,9 +905,10 @@ section{
 }
 
 .port-content h3{
-    color: var(--hover-color);
+    color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .port-content p{
@@ -921,8 +939,13 @@ section{
     color: var(--hover-color);
 }
 
-.port-content a:hover  {
-    background: var(--secon-bg-color);
+.port-content a:hover {
+    .port-content a{
+        background: var(--secon-bg-color);
+    };
+    .port-content i{
+        color: var(--hover-color);
+    }
 }
 
 /* .port-content a:hover .port-content a i{
@@ -1120,7 +1143,7 @@ footer p{
     footer p{
         font-size: .6rem;
     }
-        .fillter-buttons .btn {
+        .fillter-buttons .button {
             font-size: .8rem;
         }
         .img-about img{
@@ -1228,7 +1251,7 @@ footer p{
         background-color: var(--bg-color);
         text-align: left;
         padding: 0 5%;
-        transition: all .45s ease;
+        /* transition: all .45s ease; */
         align-items: stretch;
     }
         .navlist.open a{
@@ -1280,4 +1303,27 @@ footer p{
             height: 100%;
             top: 10%;
         }
+}
+
+ /* parallax--------------------------------------------------------------- */
+
+.scroll-scale {
+    opacity: 0;
+    transform: scale(.9);
+    transition: all 2s;
+}
+
+.scroll-bottom{
+    opacity: 1;
+    transform: translateY(300px);
+    transition: 3s;
+}
+.scroll-top{
+    opacity: 1;
+    transform: translateY(-300px);
+    transition: 3s;
+}
+.show-items{
+    opacity: 1;
+    transform: translateX(0);
 }
