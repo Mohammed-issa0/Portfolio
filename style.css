@@ -1073,7 +1073,7 @@ footer p{
         background-color: var(--bg-color);
         text-align: left;
         padding: 0 5%;
-        transition: all .45s ease;
+        transition: all .2s ease;
     }
     .navlist a{
         display: block;
