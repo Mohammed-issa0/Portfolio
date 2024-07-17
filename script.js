@@ -117,3 +117,12 @@ window.onscroll =()=>{
 //         flyBtn.style.display="none";
 //     }
 // }
+
+let flyBtn = document.querySelector('.flyBtn');
+window.addEventListener('scroll', function() {
+    if (window.scrollY >= 600) { // تعديل القيمة بناءً على المكان الذي تريد ظهور الزر عنده
+        flyBtn.style.display = 'block';
+    } else {
+        flyBtn.style.display = 'none';
+    }
+});

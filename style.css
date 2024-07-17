@@ -995,9 +995,13 @@ footer p{
     font-size: 1rem;
     color: var(--secon-bg-color);
 } */
-/* .flyBtn{
+.flyBtn{
     display: none;
-} */
+    position: fixed;
+    z-index: 1000;
+    bottom: 30px;
+    right: 35px;
+}
 .flyBtn a{
     display: inline-flex;
     justify-content: center;
@@ -1005,10 +1009,6 @@ footer p{
     background: var(--hover-color);
     padding: .6rem;
     border-radius: 5px;
-    position: fixed;
-    bottom: 30px;
-    right: 35px;
-    z-index: 1000;
 }
 .flyBtn a i {
     font-size: 1rem;
@@ -1139,6 +1139,22 @@ footer p{
     /* .header{
         position: fixed;
     } */
+        /* #menu-icon{
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            align-items: center;
+            vertical-align: auto;
+        } */
+         .flyBtn a{
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+         }
+        .flyBtn a i{
+        font-size: 30px;
+        }
     .skill-main {
         width: 100%;
         display: grid;
@@ -1224,4 +1240,28 @@ footer p{
         width: 100%; */
     
                 /* width: 250px !important; */
+}
+
+@media (min-width: 768px){
+        .liquid-shaped {
+                width: 51%;
+                left: -1%;
+                top: 10%;
+            }
+}
+
+@media (max-width: 991px) {
+    .liquid-shaped {
+            width: 51%;
+            left: -1%;
+            top: 10%;
+        }
+}
+
+@media (min-width: 992px) {
+    .liquid-shaped {
+            width: 100%;
+            height: 100%;
+            top: 10%;
+        }
 }
