@@ -1089,7 +1089,42 @@ footer p{
     #menu-icon.bx-x{
         transition: rotate(-180deg);
     }
-    .navlist{
+    .navlist {
+        position: absolute;
+        left: 50%;
+        top: -1000px;
+        /* البداية خارج الشاشة */
+        transform: translate(-50%, -100%);
+        display: flex;
+        width: 250px;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        border: 5px solid var(--hover-color);
+        border-radius: 10px;
+        box-shadow: var(--neon-box-shadow);
+        padding: 0 5%;
+        opacity: 0;
+        transition: all 0.45s ease;
+        /* إضافة انتقال سلس */
+    }
+
+    .navlist.open {
+        top: 50%;
+        transform: translate(-50%, 30%);
+        opacity: 1;
+    }
+
+    .navlist li {
+        list-style: none;
+    }
+
+    .navlist a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+    }
+    /* .navlist{
         display: flex;
         position: absolute;
         top: -1000px;
@@ -1100,15 +1135,15 @@ footer p{
         text-align: left;
         padding: 0 5%;
         transition: all .2s ease;
-    }
-    .navlist a{
+    } */
+    /* .navlist a{
         display: block;
         padding-bottom: 1rem;
         font-size: 1rem;
     }
     .navlist.open{
         top: 100%;
-    }
+    } */
     .home{
         grid-template-columns: 1fr;
     }
