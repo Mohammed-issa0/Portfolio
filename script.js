@@ -66,7 +66,15 @@ document.querySelectorAll('.social-icons a').forEach(anchor => {
     });
 });
 
-
+// let header1 = document.querySelector("header");
+// window.onscroll = function(){
+//     if(scrollY >= 400){
+//         header1.style.position='fixed';
+//         header1.style.backdropFilter= 'blur(20px)';
+//     }else{
+//         header1.style.backdropFilter= 'none';
+//     }
+// }
 // ----------------------------------------------------------------------------
 // circle skill ----------------------------------------------
 const circles= document.querySelectorAll('.circle');
