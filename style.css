@@ -241,6 +241,7 @@ header.sticky{
     font-size: 26px;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #fff !important;
 }
 span{
     color: var(--hover-color);
@@ -380,6 +381,21 @@ section{
     font-size: 1rem;
 }
 
+.info-box h5.em::before{
+    content: "\eac1";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.info-box h5.pn::before{
+    content: "\ebb2";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: top;
+}
 .info-box span {
     font-size: 15px;
     color: #bdbdbd;
@@ -522,6 +538,7 @@ section{
 
 .liquid-shaped:nth-child(2){
     filter: blur(10px);
+    mix-blend-mode: screen;
 }
 
 @media (max-width: 767px) {
@@ -689,6 +706,54 @@ section{
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+}
+
+.skill-left .skill-bar .info p.html:before{
+    content: "\e940";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-left .skill-bar .info p.css:before{
+    content: "\e91e";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-left .skill-bar .info p.js:before{
+    content: "\e946";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-left .skill-bar .info p.sass:before{
+    content: "\e96c";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-left .skill-bar .info p.ps:before{
+    content: "\ebb7";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.skill-left .skill-bar .info p.ai:before{
+    content: "\ee64";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 
 .skill-left .skill-bar .bar{
@@ -1379,6 +1444,17 @@ footer p{
 .scroll-top{
     opacity: 1;
     transform: translateY(-300px);
+    transition: 3s;
+}
+.scroll-left{
+    opacity: 1;
+    transform: translateX(-300px);
+    transition: 3s;
+}
+
+.scroll-right{
+    opacity: 1;
+    transform: translateX(300px);
     transition: 3s;
 }
 .show-items{
