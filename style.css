@@ -103,6 +103,16 @@ body{
         width: 0%;
     }
     100%{
+        width: 85%;
+    }
+    
+}
+
+@keyframes tailwind {
+    0%{
+        width: 0%;
+    }
+    100%{
         width: 80%;
     }
     
@@ -740,6 +750,14 @@ section{
     vertical-align: middle;
 }
 
+.skill-left .skill-bar .info p.tailwind:before{
+    content: "\e97a";
+    font-family: 'Boxicons';
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 .skill-left .skill-bar .info p.ps:before{
     content: "\ebb7";
     font-family: 'Boxicons';
@@ -784,8 +802,12 @@ section{
     animation: css 3s;
 }
 .skill-bar .bar .sass{
-    width: 80%;
+    width: 85%;
     animation: sass 3s;
+}
+.skill-bar .bar .tailwind{
+    width: 80%;
+    animation: tailwind 3s;
 }
 .skill-bar .bar .javascript{
     width: 70%;
