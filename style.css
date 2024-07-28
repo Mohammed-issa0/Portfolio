@@ -310,6 +310,19 @@ span{
 section{
     padding: 100px 10%;
 }
+
+/* .chat::before{
+    content: "\ed2d";
+    font-family: "boxicons";
+    position: absolute;
+    z-index: 1000;
+    right: -100px;
+    top: -80px;
+    color: #fff;
+    font-size: 300px;
+    -webkit-box-reflect: left;
+} */
+
 .home{
     min-height: 100vh;
     height: 100%;
@@ -534,6 +547,7 @@ section{
     /* max-width: 350px; */
     height: auto;
     transition: .4s;
+    position: relative;
 }
 .img-box img:hover{
     filter: blur(10px);
